@@ -35,7 +35,7 @@ export default (html, url) => {
     price = priceOrig * 0.93;
   }
 
-  if (currency === 'лей') {
+  if (currency === 'леев') {
     price = priceOrig * 0.049;
   }
 
@@ -58,9 +58,7 @@ export default (html, url) => {
     announceAuthor: getCharacteristicByText('Автор объявления'),
     housingStock: getCharacteristicByText('Жилой фонд'),
     planning: getCharacteristicByText('Планировка'),
-    kitchenSurface: getCharacteristicByText('Площадь кухни')
-      .replace(/\D/g, '')
-      .replace(/\D/g, ''),
+    kitchenSurface: getCharacteristicByText('Площадь кухни').replace(/\D/g, ''),
     ceilingHeight: getCharacteristicByText('Высота потолков').replace(
       /\D/g,
       '',
