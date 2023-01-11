@@ -50,7 +50,7 @@ export default (html, url) => {
     nbLevels: getCharacteristicByText('Количество этажей'),
     buildingType: getCharacteristicByText('Тип здания'),
     totalSurface: surface,
-    livingSurface: getCharacteristicByText('Жилая площадь'),
+    livingSurface: getCharacteristicByText('Жилая площадь').replace(/\D/g, ''),
     dwellingsState: getCharacteristicByText('Состояние квартиры'),
     nbBalconies: getCharacteristicByText('Балкон / лоджия'),
     nbBathrooms: getCharacteristicByText('Санузел'),
@@ -58,7 +58,9 @@ export default (html, url) => {
     announceAuthor: getCharacteristicByText('Автор объявления'),
     housingStock: getCharacteristicByText('Жилой фонд'),
     planning: getCharacteristicByText('Планировка'),
-    kitchenSurface: getCharacteristicByText('Площадь кухни').replace(/\D/g, ''),
+    kitchenSurface: getCharacteristicByText('Площадь кухни')
+      .replace(/\D/g, '')
+      .replace(/\D/g, ''),
     ceilingHeight: getCharacteristicByText('Высота потолков').replace(
       /\D/g,
       '',
